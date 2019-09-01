@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Game from "./classes/game";
-import "./TicTacToe.css";
 
 const game = new Game();
 
-const TicTacToe = () => {
+const ObjectOriented = () => {
   const [board, setBoard] = useState([[], [], []]);
   useEffect(() => {
     const updateBoard = (row, column, squareState) => {
@@ -46,4 +45,4 @@ const TicTacToe = () => {
   );
 };
 
-export default TicTacToe;
+export default ObjectOriented;

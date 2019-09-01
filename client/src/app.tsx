@@ -7,13 +7,13 @@ const App = () => {
     <Router>
       <ul>
         <li>
-          <Link to="demos/">Demos</Link>
+          <Link to="/demos/">Demos</Link>
         </li>
         <li>
-          <Link to="libs/">Libs</Link>
+          <Link to="/libs/">Libs</Link>
         </li>
         <li>
-          <Link to="notes/">Notes</Link>
+          <Link to="/notes/">Notes</Link>
         </li>
       </ul>
       <hr />
