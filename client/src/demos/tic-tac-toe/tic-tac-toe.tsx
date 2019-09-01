@@ -18,19 +18,21 @@ const TicTacToe = () => {
         </li>
       </ul>
       <hr />
-      <Route exact path="/" component={() => <div>Tic Tac Toe</div>} />
-      <Route
-        path="/demos/tic-tac-toe/object-oriented"
-        component={ObjectOriented}
-      />
-      <Route
-        path="/demos/tic-tac-toe/data-driven"
-        component={() => <div>coming soon</div>}
-      />
-      <Route
-        path="/demos/tic-tac-toe/behavioral"
-        component={() => <div>coming soon</div>}
-      />
+      <div className="ttt">
+        <Route exact path="/" component={() => <div>Tic Tac Toe</div>} />
+        <Route
+          path="/demos/tic-tac-toe/object-oriented"
+          component={ObjectOriented}
+        />
+        <Route
+          path="/demos/tic-tac-toe/data-driven"
+          component={() => <div>coming soon</div>}
+        />
+        <Route
+          path="/demos/tic-tac-toe/behavioral"
+          component={() => <div>coming soon</div>}
+        />
+      </div>
     </Router>
   );
 };
