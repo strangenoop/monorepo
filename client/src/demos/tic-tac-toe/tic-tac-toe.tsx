@@ -19,7 +19,11 @@ const TicTacToe = () => {
       </ul>
       <hr />
       <div className="ttt">
-        <Route exact path="/" component={() => <div>Tic Tac Toe</div>} />
+        <Route
+          exact
+          path="/demos/tic-tac-toe"
+          component={() => <div>Tic Tac Toe</div>}
+        />
         <Route
           path="/demos/tic-tac-toe/object-oriented"
           component={ObjectOriented}

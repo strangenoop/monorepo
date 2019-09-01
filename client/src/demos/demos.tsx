@@ -15,7 +15,7 @@ const Demos = () => {
         </li>
       </ul>
       <hr />
-      <Route exact path="/" component={() => <div>Demos</div>} />
+      <Route exact path="/demos" component={() => <div>Demos</div>} />
       <Route path="/demos/hello-api" component={HelloApi} />
       <Route path="/demos/tic-tac-toe" component={TicTacToe} />
     </Router>
