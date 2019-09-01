@@ -26,7 +26,18 @@ const App = () => {
         </li>
       </ul>
       <hr />
-      <Route exact path="/" component={() => <div>Home</div>} />
+      <Route
+        exact
+        path="/"
+        component={() => (
+          <p>
+            The name "strangenoop" is a nod Douglas Hofstadter's concept of a
+            "strange loop". It's that combined with "noop", which is a lodash
+            function that doesn't do anything. While the lodash function is
+            pronounced "no-op", strangenoop is pronounced the way it's spelled.
+          </p>
+        )}
+      />
       <Route path="/demos" component={Demos} />
       <Route path="/libs" component={() => <div>coming soon</div>} />
       <Route path="/articles" component={() => <div>coming soon</div>} />
