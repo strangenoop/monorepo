@@ -1,0 +1,16 @@
+title:
+Assymetrical Data Flow
+
+p:
+(Start with the quote from mindstorms about dropping the thing off the leaning tower of Pisa.)
+
+p: 
+There's a widely misunderstood concept called "unidirectional data flow."
+I know that it's misunderstood because people draw pictures like this to represent it...
+
+img:
+(...)
+
+p:
+The picture above does not represent unidirectional data flow.
+To see this, we can run it through a series of small transformations.
