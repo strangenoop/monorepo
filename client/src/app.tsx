@@ -7,6 +7,12 @@ const App = () => {
     <Router>
       <ul>
         <li>
+          <Link to="/">home</Link>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
           <Link to="/demos/">Demos</Link>
         </li>
         <li>
