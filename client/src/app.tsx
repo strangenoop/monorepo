@@ -13,13 +13,13 @@ const App = () => {
       <hr />
       <ul>
         <li>
-          <Link to="/demos/">Demos</Link>
+          <Link to="/demos/">demos</Link>
         </li>
         <li>
-          <Link to="/libs/">Libs</Link>
+          <Link to="/libs/">libs</Link>
         </li>
         <li>
-          <Link to="/articles/">Articles</Link>
+          <Link to="/articles/">articles</Link>
         </li>
       </ul>
       <hr />

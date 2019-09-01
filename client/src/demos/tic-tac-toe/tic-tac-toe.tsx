@@ -8,13 +8,13 @@ const TicTacToe = () => {
     <Router>
       <ul>
         <li>
-          <Link to="/demos/tic-tac-toe/object-oriented">Object Oriented</Link>
+          <Link to="/demos/tic-tac-toe/object-oriented">object-oriented</Link>
         </li>
         <li>
-          <Link to="/demos/tic-tac-toe/data-driven">Data Driven</Link>
+          <Link to="/demos/tic-tac-toe/data-driven">data-driven</Link>
         </li>
         <li>
-          <Link to="/demos/tic-tac-toe/behavioral">Behavioral</Link>
+          <Link to="/demos/tic-tac-toe/behavioral">behavioral</Link>
         </li>
       </ul>
       <hr />

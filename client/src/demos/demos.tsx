@@ -8,10 +8,10 @@ const Demos = () => {
     <Router>
       <ul>
         <li>
-          <Link to="/demos/hello-api/">Hello API</Link>
+          <Link to="/demos/hello-api/">hello-api</Link>
         </li>
         <li>
-          <Link to="/demos/tic-tac-toe/">Tic Tac Toe</Link>
+          <Link to="/demos/tic-tac-toe/">tic-tac-toe</Link>
         </li>
       </ul>
       <hr />
