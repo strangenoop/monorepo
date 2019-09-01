@@ -21,12 +21,16 @@ const App = () => {
         <li>
           <Link to="/articles/">articles</Link>
         </li>
+        <li>
+          <Link to="/cv/">cv</Link>
+        </li>
       </ul>
       <hr />
       <Route exact path="/" component={() => <div>Home</div>} />
       <Route path="/demos" component={Demos} />
       <Route path="/libs" component={() => <div>coming soon</div>} />
       <Route path="/articles" component={() => <div>coming soon</div>} />
+      <Route path="/cv" component={() => <div>coming soon</div>} />
     </Router>
   );
 };
