@@ -6,7 +6,9 @@ const KeyboardMusic = () => {
   const [keys, setKeys] = useState<Set<string>>(new Set());
   useEffect(() => {
     const addKey = ({ key }: KeyboardEvent) => {
-      setKeys(keys => new Set(keys).add(key));
+      if (!keys.has(key)) {
+        setKeys(keys => new Set(keys).add(key));
+      }
     };
     const removeKey = ({ key }: KeyboardEvent) => {
       setKeys(keys => {
