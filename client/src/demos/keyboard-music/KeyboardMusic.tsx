@@ -3,13 +3,17 @@ import Tones from "./Tones";
 import { compact } from "lodash";
 
 const KeyboardMusic = () => {
-  const [keys, setKeys] = useState<string[]>([]);
+  const [keys, setKeys] = useState<Set<string>>(new Set());
   useEffect(() => {
-    const addKey = ({ key: newKey }: KeyboardEvent) => {
-      setKeys(keys => [...keys, newKey]);
+    const addKey = ({ key }: KeyboardEvent) => {
+      setKeys(keys => new Set(keys).add(key));
     };
-    const removeKey = ({ key: oldKey }: KeyboardEvent) => {
-      setKeys(keys => keys.filter(key => key !== oldKey));
+    const removeKey = ({ key }: KeyboardEvent) => {
+      setKeys(keys => {
+        const nextKeys = new Set(keys);
+        nextKeys.delete(key);
+        return nextKeys;
+      });
     };
     window.addEventListener("keydown", addKey);
     window.addEventListener("keyup", removeKey);
@@ -18,11 +22,12 @@ const KeyboardMusic = () => {
       window.removeEventListener("keyup", removeKey);
     };
   });
+
   return (
     <>
       <div>{keys}</div>
       <div>
-        <Tones freqs={compact(keys.map(getFreqFromKey))} />
+        <Tones freqs={compact([...keys].map(getFreqFromKey))} />
       </div>
     </>
   );
