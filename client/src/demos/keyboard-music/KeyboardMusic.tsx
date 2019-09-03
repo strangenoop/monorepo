@@ -5,15 +5,11 @@ import { compact } from "lodash";
 const KeyboardMusic = () => {
   const [keys, setKeys] = useState<string[]>([]);
   useEffect(() => {
-    const addKey = (e: KeyboardEvent) => {
-      const newKey = e.key;
-      if (!keys.includes(newKey)) {
-        setKeys([...keys, newKey]);
-      }
+    const addKey = ({ key: newKey }: KeyboardEvent) => {
+      setKeys(keys => [...keys, newKey]);
     };
-    const removeKey = (e: KeyboardEvent) => {
-      const oldKey = e.key;
-      setKeys(keys.filter(key => key !== oldKey));
+    const removeKey = ({ key: oldKey }: KeyboardEvent) => {
+      setKeys(keys => keys.filter(key => key !== oldKey));
     };
     window.addEventListener("keydown", addKey);
     window.addEventListener("keyup", removeKey);
