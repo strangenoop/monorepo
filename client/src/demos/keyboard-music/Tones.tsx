@@ -20,7 +20,7 @@ export default Tones;
 
 const Tone = ({ waveform, freq }: { waveform: Waveform; freq: number }) => {
   useEffect(() => {
-    let osc = audioContext.createOscillator();
+    let osc = audioCtx.createOscillator();
     osc.connect(masterGainNode);
     osc.type = waveform;
     osc.frequency.value = freq;
@@ -34,14 +34,10 @@ const Tone = ({ waveform, freq }: { waveform: Waveform; freq: number }) => {
 
 // Setup
 
-const audioContext = new AudioContext();
+const audioCtx = new AudioContext();
 
-const masterGainNode = audioContext.createGain();
-masterGainNode.connect(audioContext.destination);
-masterGainNode.gain.value = 0.5;
-
-let osc = audioContext.createOscillator();
-osc.connect(masterGainNode);
+const masterGainNode = audioCtx.createGain();
+masterGainNode.connect(audioCtx.destination);
 
 // Types
 
