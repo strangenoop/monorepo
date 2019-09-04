@@ -1,16 +1,13 @@
 import React, { useEffect } from "react";
 
-const Tones = ({
-  waveform = "sine",
-  freqs
-}: {
-  waveform?: Waveform;
-  freqs: number[];
-}) => {
+const Tones = ({ freqs }: { freqs: number[] }) => {
   return (
     <>
-      {freqs.map((freq, i) => (
-        <Tone key={freq + i} waveform={waveform} freq={freq} />
+      {freqs.map(freq => (
+        <div key={freq}>
+          <Tone freq={freq} detune={-10} />
+          <Tone freq={freq} detune={10} />
+        </div>
       ))}
     </>
   );
@@ -18,12 +15,21 @@ const Tones = ({
 
 export default Tones;
 
-const Tone = ({ waveform, freq }: { waveform: Waveform; freq: number }) => {
+const Tone = ({
+  freq,
+  waveform = "sine",
+  detune = 0
+}: {
+  freq: number;
+  waveform?: Waveform;
+  detune?: number;
+}) => {
   useEffect(() => {
     let osc = audioCtx.createOscillator();
     osc.connect(masterGainNode);
     osc.type = waveform;
     osc.frequency.value = freq;
+    osc.detune.value = detune;
     osc.start();
     return () => {
       osc.stop();
