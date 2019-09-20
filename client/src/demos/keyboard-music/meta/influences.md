@@ -5,3 +5,5 @@ https://code.tutsplus.com/tutorials/the-web-audio-api-make-your-own-web-synthesi
 https://medium.com/music-thing-modular-notes/chord-organ-the-easiest-way-to-get-simple-chords-from-a-modular-synth-2f48684fdb9a
 
 https://en.wikipedia.org/wiki/Piano_key_frequencies
+
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Simple_synth
