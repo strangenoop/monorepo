@@ -41,13 +41,22 @@ const getFreqFromKey = (key: string) => {
   return mapKeyToFreq[key] || null;
 };
 
+const multiplier = 2 ** (1 / 12);
+const root = 440;
+
+const fq = (distanceFromRoot: number) => {
+  return root * multiplier ** distanceFromRoot;
+};
+
 const piano = {
+  b3: 246.9417,
   c4: 261.6256,
   d4: 293.6648,
   e4: 329.6276,
   f4: 349.2282,
   g4: 391.9954,
-  a4: 440.0,
+  as4: fa(1)
+  a4: fq(0),
   b4: 493.8833,
   c5: 523.2511,
   d5: 587.3295,
