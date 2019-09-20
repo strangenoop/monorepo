@@ -45,6 +45,12 @@ const multiplier = 2 ** (1 / 12);
 const root = 440;
 
 const fq = (distanceFromRoot: number) => {
+  // Say the key is 3 units away from the root.
+  // We want to multiply the root frequency by the multiplier 3 times.
+  // == (((R * M) * M) * M)
+  // == R * (M * M * M)
+  // == R * (M ** 3)
+  // QUESTION: how does it work for negative distances?
   return root * multiplier ** distanceFromRoot;
 };
 
@@ -55,7 +61,7 @@ const piano = {
   e4: 329.6276,
   f4: 349.2282,
   g4: 391.9954,
-  as4: fa(1)
+  as4: fq(1),
   a4: fq(0),
   b4: 493.8833,
   c5: 523.2511,
