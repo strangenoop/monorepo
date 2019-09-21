@@ -24,11 +24,7 @@ export const createCache = ({
 
       // handle maxAge
       if (maxAge) {
-        timerIds.push(
-          window.setTimeout(() => {
-            cache.delete(key);
-          }, maxAge)
-        );
+        timerIds.push(window.setTimeout(() => cache.delete(key), maxAge));
       }
 
       return result;
